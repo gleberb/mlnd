@@ -12629,51 +12629,51 @@ Training a GaussianNB using a training set size of 200. . .
 Trained model in 0.0010 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.7647.
-Made predictions in 0.0000 seconds.
+Made predictions in 0.0010 seconds.
 F1 score for test set: 0.6667.
 Training a GaussianNB using a training set size of 300. . .
 Trained model in 0.0010 seconds
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.7811.
 Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7939.
 -----------------------
 Training a LogisticRegression using a training set size of 100. . .
-Trained model in 0.0810 seconds
-Made predictions in 0.0110 seconds.
+Trained model in 0.1810 seconds
+Made predictions in 0.0120 seconds.
 F1 score for training set: 0.8182.
-Made predictions in 0.0000 seconds.
+Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7794.
 Training a LogisticRegression using a training set size of 200. . .
-Trained model in 0.0020 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0030 seconds
+Made predictions in 0.0020 seconds.
 F1 score for training set: 0.8045.
-Made predictions in 0.0000 seconds.
+Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7597.
 Training a LogisticRegression using a training set size of 300. . .
-Trained model in 0.0030 seconds
-Made predictions in 0.0000 seconds.
+Trained model in 0.0040 seconds
+Made predictions in 0.0010 seconds.
 F1 score for training set: 0.8278.
 Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7820.
 -----------------------
 Training a RandomForestClassifier using a training set size of 100. . .
-Trained model in 0.0190 seconds
+Trained model in 0.0220 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.9844.
 Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7972.
 Training a RandomForestClassifier using a training set size of 200. . .
-Trained model in 0.0190 seconds
+Trained model in 0.0300 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.9840.
 Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7538.
 Training a RandomForestClassifier using a training set size of 300. . .
-Trained model in 0.0220 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0360 seconds
+Made predictions in 0.0020 seconds.
 F1 score for training set: 0.9922.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0020 seconds.
 F1 score for test set: 0.7910.
 -----------------------
 </pre>
@@ -12844,7 +12844,7 @@ F1 score for test set: 0.7910.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer [REVIEW]: </strong> Random Forest is just a bunch of decision trees. Decision tree is an algorithm that make simple questions in order to categorize the data. For example, if a bank needs to decide whether to lend money to a customer, it will check its historical data and start to make a serie of questions. Based on answers the bank can conclude if it will lend money or not.
-However trust in a single decision tree could be a weak decision. Then we used Random Forest, that I said before, it is a bunch of decision trees. The algorithm combine many trees to get a better result.</p>
+However trust in a single decision tree could be a weak decision. Then we used Random Forest, that I said before, it is a bunch of decision trees. The algorithm combine many trees to get a better result. <strong>[REVIEW 2]</strong> The bunch of decision trees are generated randomly. In our case we have a dataset with 30 features. Not all features are used in each of decision trees. Let's suppose that you use 20% of features of each decision tree. That means the algorithm will select randomly 6 features for each tree. This technique guarantees to train the data in numerous different decision trees. With the results of this series of decision trees, the algorithm can decide the best classification for specific input. The decision is made by vote. For example: we run the algorithm with 100 decision trees. A specific student was classified as "passed" in 85 decision trees and "not passed" in 15 trees. In this case, the majority vote for this student is "passed" and that is the result of the algorithm.</p>
 
 </div>
 </div>
@@ -12874,7 +12874,7 @@ However trust in a single decision tree could be a weak decision. Then we used R
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12923,7 +12923,7 @@ However trust in a single decision tree could be a weak decision. Then we used R
 <pre>{&#39;n_estimators&#39;: 100, &#39;criterion&#39;: &#39;gini&#39;}
 Made predictions in 0.0090 seconds.
 Tuned model has a training F1 score of 1.0000.
-Made predictions in 0.0070 seconds.
+Made predictions in 0.0080 seconds.
 Tuned model has a testing F1 score of 0.8667.
 --------------------------------------------------------------------------
 </pre>
