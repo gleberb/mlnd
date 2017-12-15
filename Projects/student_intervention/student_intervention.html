@@ -12434,6 +12434,11 @@ Testing set has 95 samples.
 <li>Strong feature indepence assumptions</li>
 </ul>
 </li>
+<li><strong>Applicability [Review] : </strong><ul>
+<li>Naive Bayes is very simple and very cheap in terms of computation and, since it is good with small datasets for training I thing it is a good candidate to solve our problem.</li>
+<li><em>ref: Building Machine Learning with Python, Willi Richert and Luis Pedro Coelho - Packt Publishing. Page 146</em></li>
+</ul>
+</li>
 </ul>
 <h4 id="Ensemble-Methods---Random-Forest">Ensemble Methods - Random Forest<a class="anchor-link" href="#Ensemble-Methods---Random-Forest">&#182;</a></h4><ul>
 <li>Applications include classification of internet traffic, bioinformatics like , gene expression classification, mass spectrum protein expression analysis, biomarker discovery, sequence annotation, protein-protein interaction prediction. </li>
@@ -12447,6 +12452,10 @@ Testing set has 95 samples.
 <li>Biased in multiclass problems toward more frequent classes</li>
 </ul>
 </li>
+<li><strong>Applicability [Review] : </strong><ul>
+<li>Decision trees are very good in classification problems, and using Random Forest we have more consistent results. Since random forest will create a bunch of random decision trees, it can deal with these results to pick the best. Another point is that in our case, we didn't even create the dummy variables because random forest is able to work with discrete and categorical variables. Besides that, random forest is not prone to overfit the model like a single decision tree.</li>
+</ul>
+</li>
 </ul>
 <h4 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h4><ul>
 <li>Applications include ordering results by probability, modelling marketing responses.</li>
@@ -12458,8 +12467,11 @@ Testing set has 95 samples.
 <li>Logistic regression tends to underperform when there are multiple or non-linear decision boundaries. They are not flexible enough to naturally capture more complex relationships.</li>
 </ul>
 </li>
+<li><strong>Applicability [Review] : </strong><ul>
+<li>We have a binary classification with most part our features as continuous and/or categorical data. </li>
 </ul>
-<h4 id="Applicability">Applicability<a class="anchor-link" href="#Applicability">&#182;</a></h4><p>All these algorithms are used to classification problems. I've picked the most distinct algorithms to test results, based on strenghts and weaknesses of them.</p>
+</li>
+</ul>
 <p><em>Refs:</em></p>
 <p><a href="http://www.dummies.com/programming/big-data/data-science/machine-learning-dummies-cheat-sheet/">Machine Learning for Dummies Cheat Sheet</a></p>
 <p><a href="https://elitedatascience.com/machine-learning-algorithms">Modern Machine Learning Algorithms: Strengths and Weaknesses</a></p>
@@ -12486,7 +12498,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12558,7 +12570,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12608,27 +12620,27 @@ Testing set has 95 samples.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a GaussianNB using a training set size of 100. . .
-Trained model in 0.0020 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0010 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.4198.
-Made predictions in 0.0020 seconds.
+Made predictions in 0.0010 seconds.
 F1 score for test set: 0.2759.
 Training a GaussianNB using a training set size of 200. . .
-Trained model in 0.0030 seconds
+Trained model in 0.0010 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.7647.
-Made predictions in 0.0020 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.6667.
 Training a GaussianNB using a training set size of 300. . .
-Trained model in 0.0020 seconds
+Trained model in 0.0010 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.7811.
 Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7939.
 -----------------------
 Training a LogisticRegression using a training set size of 100. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0810 seconds
+Made predictions in 0.0110 seconds.
 F1 score for training set: 0.8182.
 Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7794.
@@ -12636,30 +12648,30 @@ Training a LogisticRegression using a training set size of 200. . .
 Trained model in 0.0020 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.8045.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7597.
 Training a LogisticRegression using a training set size of 300. . .
-Trained model in 0.0070 seconds
-Made predictions in 0.0050 seconds.
+Trained model in 0.0030 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8278.
 Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7820.
 -----------------------
 Training a RandomForestClassifier using a training set size of 100. . .
-Trained model in 0.0200 seconds
+Trained model in 0.0190 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.9844.
 Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7972.
 Training a RandomForestClassifier using a training set size of 200. . .
-Trained model in 0.0220 seconds
+Trained model in 0.0190 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.9840.
 Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7538.
 Training a RandomForestClassifier using a training set size of 300. . .
-Trained model in 0.0210 seconds
-Made predictions in 0.0020 seconds.
+Trained model in 0.0220 seconds
+Made predictions in 0.0010 seconds.
 F1 score for training set: 0.9922.
 Made predictions in 0.0010 seconds.
 F1 score for test set: 0.7910.
@@ -12831,8 +12843,8 @@ F1 score for test set: 0.7910.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> I think the best way to explain the Random Forest is through examples. I found a very good example that explain for layman in simple terms and I think it's worth sharing.</p>
-<p><a href="http://blog.echen.me/2011/03/14/laymans-introduction-to-random-forests/">Layman's Introduction to Random Forests</a></p>
+<p><strong>Answer [REVIEW]: </strong> Random Forest is just a bunch of decision trees. Decision tree is an algorithm that make simple questions in order to categorize the data. For example, if a bank needs to decide whether to lend money to a customer, it will check its historical data and start to make a serie of questions. Based on answers the bank can conclude if it will lend money or not.
+However trust in a single decision tree could be a weak decision. Then we used Random Forest, that I said before, it is a bunch of decision trees. The algorithm combine many trees to get a better result.</p>
 
 </div>
 </div>
@@ -12862,7 +12874,7 @@ F1 score for test set: 0.7910.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12877,10 +12889,11 @@ F1 score for test set: 0.7910.
 <span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1973</span><span class="p">)</span>
 
 <span class="c1"># TODO: Make an f1 scoring function using &#39;make_scorer&#39; </span>
-<span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">)</span>
+<span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
 
 <span class="c1"># TODO: Perform grid search on the classifier using the f1_scorer as the scoring method</span>
-<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+<span class="c1"># [REVIEW]</span>
+<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">f1_scorer</span><span class="p">)</span>
 
 <span class="c1"># TODO: Fit the grid search object to the training data and find the optimal parameters</span>
 <span class="n">grid_obj</span> <span class="o">=</span> <span class="n">grid_obj</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
