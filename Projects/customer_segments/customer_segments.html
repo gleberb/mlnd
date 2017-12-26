@@ -14085,7 +14085,7 @@ IKSJ6m9n+AAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10782898&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10360898&gt;</pre>
 </div>
 
 </div>
@@ -15112,7 +15112,7 @@ JDX/D5T/QtlsSudCAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -19212,7 +19212,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -20804,7 +20804,7 @@ The sum of Dimension 1 and Dimension 2 is 0.7068 or 70.68% of the total variance
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10c95ac8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc795668&gt;</pre>
 </div>
 
 </div>
@@ -21912,12 +21912,49 @@ HRERERERkQ9jUkdEREREROTDmNQRERERERH5MCZ1REREREREPoxJHRERERERkQ9jUkdEREREROTD
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong>
+<strong>[REVIEW]</strong>
+Both methods are unsupervised learners algorithms to classify elements in clusters. The common features are: <br>
+1- Unsupervised classification.<br>
+2- need a random initial gues for centroids.<br>
+3- classifiy the data points based on distance.<br>
+4- iteratively update the centroids until converged.<br></p>
+<p>The main difference is that K-Means use a hard clustering method and GMM use soft clustering method. It means that in k-means each points will be part of cluster while in GMM the points have a probability to be part of specific cluster. Each one could give a different result of clusters. As example, check the image of cluster analysis results on "mouse" data set extract from Wikipedia:<br>
+<img src="File_ClusterAnalysis_Mouse.svg.png" alt="alt text"></p>
 <ul>
-<li>K-Means is cheap in terms of computational resources and very fast to find the clusters.</li>
-<li>Gaussian Mixture Model use soft clustering that assign a score for each point of the cluster. This score indicates the strenght of the point to cluster (ref: <a href="https://www.mathworks.com/help/stats/clustering-using-gaussian-mixture-models.html?requestedDomain=www.mathworks.com">https://www.mathworks.com/help/stats/clustering-using-gaussian-mixture-models.html?requestedDomain=www.mathworks.com</a>) </li>
+<li>K-Means <ul>
+<li>Advantages:<ul>
+<li>Runs fast</li>
+<li>Better for high dimensional data</li>
+<li>Easy to interpret and and easy to implement</li>
+</ul>
+</li>
+<li>Disadvantages:<ul>
+<li>Assumes the cluster as spherical, so does not work efficiently with complex</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Gaussian Mixture Model<ul>
+<li>Advantages:<ul>
+<li>Works better with any cluster geometry than K-Means</li>
+<li>As this algorithm maximizes only the likelihood, it will no bias the means towards zero.</li>
+</ul>
+</li>
+<li>Disadvantages:<ul>
+<li>When one has insufficiently many points per mixture, estimating the covariance matrices becomes difficulty, and the algorithm is know to diverge and find solutions with infinite likelihood.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p>I will use K-Means, because we have two dimensions after data preparation. In biplot we saw that two dimensions are well defined, than I think we don't need a soft clustering.</p>
+<p><em>refs:</em></p>
+<p><a href="https://www.quora.com/What-is-the-difference-between-K-means-and-the-mixture-model-of-Gaussian">What is the difference between K-means and the mixture model of Gaussian?</a><br>
+<a href="https://www.mathworks.com/help/stats/clustering-using-gaussian-mixture-models.html?requestedDomain=www.mathworks.com">Clustering Using Gaussian Mixture Models</a><br>
+<a href="http://scikit-learn.org/stable/modules/mixture.html">2.1. Gaussian mixture models</a><br>
+<a href="https://ultraquartz.wordpress.com/2016/04/22/difference-between-k-means-and-gmm/">Difference between k-means and GMM</a><br>
+<a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm">Expectation-maximization algorithm</a></p>
 
 </div>
 </div>
@@ -22969,7 +23006,11 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The Segment 1 usually buys more fresh food, so I guess it's not a good idea to change the delivery service 5 to 3 days a week. However, I'd rather focus my efforts to run A/B tests on Segment 0, which may have better results because they buy more Groceries and Detergent_Papers. These items can be delivered less frequently than fresh foods, so for Segment 0, I think it's worth running the A/B test.</p>
+<p><strong>Answer [REVIEW]:</strong> 
+My intuition says that a change of delivery service from 5 to 3 days a week would not be well received for customers in Segment 1 because they buy more fresh food than Segment 0. However, the goal of the tests is to verify the validity of changes in processes and products in different segments.</p>
+<p>As a said before, I expect that Segment 0 can react positively to a reduction in delivery service since there is a reduction in costs. A reduction in delivery service has less impact in Segment 0 business.</p>
+<p>In Segment 1 I expect a negative reaction, because the business is sensitive of fresh food. Even with a cost reduction, this change can impact the quality of the service.</p>
+<p>In both cases, we have to apply A/B tests to validate our hypothesis.</p>
 
 </div>
 </div>
