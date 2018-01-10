@@ -13253,7 +13253,7 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong> No meu entendimento a profundidade (max_depth) adequada para o modelo é igual a 3. Note que a diferença entre o "training score" e o "testing score" é pequena mesmo aumentando o número de pontos de treinamento, num patamar próximo à 0.8. Nos outros casos onde o max_depth é maior (6 e 10), existe um aumento no training score que não é observado no testing score. Significa que provavelmente há overfit com os dados de treinamento, já que o modelo não generaliza bem. No primeiro caso, com max_depth=1, nem o training score e nem o testing score possuem uma boa pontuação.</p>
-<p><strong>[Review]</strong> Analisando o modelo com "max_depth=3", aumentar o numero de pontos de treinamento não traria um benefício maior já que o modelo alcançou uma estabilidade em torno de 0,8 tanto para a curva de treinamento, como para a curva de testes.</p>
+<p>Analisando o modelo com "max_depth=3", aumentar o numero de pontos de treinamento não traria um benefício maior já que o modelo alcançou uma estabilidade em torno de 0,8 tanto para a curva de treinamento, como para a curva de testes.</p>
 
 </div>
 </div>
@@ -13766,7 +13766,7 @@ Gf8P+Llc+1ALNuAAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong> O Grid Seach é uma técnica utilizada para otimizar os hiperparâmetros de um determinado algorítmo.</p>
-<p><strong>[Review]</strong> A técnica de Grid Search irá combinar um conjunto de valores possíveis para um parâmetro de um determinado classificador enquanto mantém os outros parâmetros constantes. Após feita a combinação, serão checados os valores para determinar o melhor resultado. Este processo será repetido para quaisquer parâmetros especificados na matriz de parâmetros.
+<p>A técnica de Grid Search irá combinar um conjunto de valores possíveis para um parâmetro de um determinado classificador enquanto mantém os outros parâmetros constantes. Após feita a combinação, serão checados os valores para determinar o melhor resultado. Este processo será repetido para quaisquer parâmetros especificados na matriz de parâmetros.
 Em outras palavras, é passado para o algoritmo um conjunto de valores para os parâmetros e uma função para medir a eficiência do classificador. Como veremos abaixo na função <code>fit_model</code>, no caso da Decision Tree, passaremos os valores de 1 a 11 para o parâmetro <code>max_depth</code> do regressor para identificar qual o melhor valor para este algoritmo baseado no conjunto de dados que temos.</p>
 
 </div>
@@ -13839,7 +13839,6 @@ Em outras palavras, é passado para o algoritmo um conjunto de valores para os p
     <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
 
     <span class="c1"># TODO: Gerar um dicionário para o parâmetro &#39;max_depth&#39; com um alcance de 1 a 10</span>
-    <span class="c1"># [REVIEW]</span>
     <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)}</span>
 
     <span class="c1"># TODO: Transformar &#39;performance_metric&#39; em uma função de pontuação utilizando &#39;make_scorer&#39; </span>
