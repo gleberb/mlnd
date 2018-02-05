@@ -16,7 +16,7 @@ Suas pesquisas podem ser aplicadas em diversas áreas, entre elas da saúde (mel
 Este projeto tem como objetivo identificar uma determinada postura de um indivíduo após a coleta de dados através de sensores que foram previamente dispostos no corpo da pessoa.
 O embasamento deste projeto encontra-se em [**http://groupware.les.inf.puc-rio.br/har**](http://groupware.les.inf.puc-rio.br/har), bem como o dataset utilizado.
 
-O objetivo é avaliar outros algoritmos diferentes do usado no artigo da PUC Rio, buscando um desempenho superior ao obtido.
+Irei avaliar outros algoritmos diferentes do usado no artigo da PUC Rio, buscando um desempenho superior ao obtido.
 
 ### Conjuntos de dados e entradas
 O conjunto de dados selecionado encontra-se disponível em [**http://groupware.les.inf.puc-rio.br/static/har/dataset-har-PUC-Rio-ugulino.zip**](http://groupware.les.inf.puc-rio.br/static/har/dataset-har-PUC-Rio-ugulino.zip) e está descritos abaixo.
@@ -33,7 +33,7 @@ Dados dos sensores:
 
 São colocados 4 sensores no corpo do indivíduo.
 
-Para cada sensor são definidos os eixos x, y e z e no dataset temos para o sensor 1 os dados, x1, y1 e z1. Para o sensor 2, x2, y2 e z2, e assim por diante.
+Para cada sensor são definidos os eixos x, y e z e no dataset temos para o sensor 1 os dados, x1, y1 e z1. Para o sensor 2,  os dados x2, y2 e z2, e assim por diante.
 A posição de cada sensor é:
 
 - Sensor 1: cintura
@@ -80,7 +80,7 @@ Após o tratamento das variáveis, irei executar os algoritmos propostos em sua 
 
 O resultado desta execução será a baseline para o restante do projeto.
 
-Com a baseline definida, irei começar um ciclo de _feature engineeiring_, parametrização e execução dos algoritmos e análise de resultados
+Com a baseline definida, irei começar um ciclo de _feature engineering_, parametrização e execução dos algoritmos e análise de resultados
 
 Por fim, na última parte do projeto consiste na apresentação dos resultados dos ciclos e comparação de resultados com o artigo original.
 
