@@ -16,7 +16,14 @@ Suas pesquisas podem ser aplicadas em diversas áreas, entre elas da saúde (mel
 Este projeto tem como objetivo identificar uma determinada postura de um indivíduo após a coleta de dados através de sensores que foram previamente dispostos no corpo da pessoa.
 O embasamento deste projeto encontra-se em [**http://groupware.les.inf.puc-rio.br/har**](http://groupware.les.inf.puc-rio.br/har), bem como o dataset utilizado.
 
-Irei avaliar outros algoritmos diferentes do usado no artigo da PUC Rio, buscando um desempenho superior ao obtido.
+**[REVIEW]** O dataset disponibilizado está em formato CSV e está bem estruturado, facilitando a leitura.
+
+A saída do processamento é um valor categórico que representa a posição do indivíduo e suas possibilidades são: sitting, sittingdown, standing, standingup, walking. Em português seria algo como: sentado, sentando, de pé, levantando e andando. 
+
+Dessa forma, trata-se de um problema de aprendizado supervisionado de classificação.
+
+Irei avaliar outros algoritmos de classificação diferentes do usado no artigo da PUC Rio, buscando um desempenho superior ao obtido.
+
 
 ### Conjuntos de dados e entradas
 O conjunto de dados selecionado encontra-se disponível em [**http://groupware.les.inf.puc-rio.br/static/har/dataset-har-PUC-Rio-ugulino.zip**](http://groupware.les.inf.puc-rio.br/static/har/dataset-har-PUC-Rio-ugulino.zip) e está descritos abaixo.
@@ -42,6 +49,18 @@ A posição de cada sensor é:
 - Sensor 4: braço direito.
 
 Por fim, temos a _feature_ "class". Trata-se da variável que queremos prever e que pode assumir os seguintes valores: 'sitting', 'sittingdown', 'standing', 'standingup', 'walking'
+
+**[REVIEW]** Durante a coleta de dados, que consistiu em 8 horas de atividades de quatro indivíduos distintos, foram geradas 165362 amostras dos sensores. Trata-se de um bom volume de dados para aplicação dos algoritmos.
+
+A distribuição das classes de classificação do dataset estão distribuídas da seguinte forma:
+
+- sittingdown = 7,15%
+- standingup = 7,50%
+- walking = 26,23%
+- standing = 28,64%
+- sitting = 30,45%
+
+Aparentement as duas primeiras classes estão sub-representadas, e pode ser que tenhamos que balancear o dataset para termos uma distribuição melhor entre as classes.
 
 ### Descrição da solução
 
