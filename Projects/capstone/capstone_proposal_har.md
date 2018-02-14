@@ -16,7 +16,7 @@ Suas pesquisas podem ser aplicadas em diversas áreas, entre elas da saúde (mel
 Este projeto tem como objetivo identificar uma determinada postura de um indivíduo após a coleta de dados através de sensores que foram previamente dispostos no corpo da pessoa.
 O embasamento deste projeto encontra-se em [**http://groupware.les.inf.puc-rio.br/har**](http://groupware.les.inf.puc-rio.br/har), bem como o dataset utilizado.
 
-**[REVIEW]** O dataset disponibilizado está em formato CSV e está bem estruturado, facilitando a leitura.
+O dataset disponibilizado está em formato CSV e está bem estruturado, facilitando a leitura.
 
 A saída do processamento é um valor categórico que representa a posição do indivíduo e suas possibilidades são: sitting, sittingdown, standing, standingup, walking. Em português seria algo como: sentado, sentando, de pé, levantando e andando. 
 
@@ -50,7 +50,7 @@ A posição de cada sensor é:
 
 Por fim, temos a _feature_ "class". Trata-se da variável que queremos prever e que pode assumir os seguintes valores: 'sitting', 'sittingdown', 'standing', 'standingup', 'walking'
 
-**[REVIEW]** Durante a coleta de dados, que consistiu em 8 horas de atividades de quatro indivíduos distintos, foram geradas 165362 amostras dos sensores. Trata-se de um bom volume de dados para aplicação dos algoritmos.
+Durante a coleta de dados, que consistiu em 8 horas de atividades de quatro indivíduos distintos, foram geradas 165362 amostras dos sensores. Trata-se de um bom volume de dados para aplicação dos algoritmos.
 
 A distribuição das classes de classificação do dataset estão distribuídas da seguinte forma:
 
